@@ -665,7 +665,7 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2025 Clínica Veterinaria San Elías. Todos los derechos reservados.</span>
-          <span>Diseñado con ❤️ para tus mascotas</span>
+          <span>Hecho por <a href="https://craftmarketing.agency/" target="_blank" rel="noopener noreferrer">Craft Agency</a></span>
         </div>
       </div>
     </footer>
@@ -743,6 +743,30 @@ function App() {
       <PorQueNosotros />
       <HorariosContacto onCita={openModal} />
       <CTAFinal onCita={openModal} />
+      <section className="section-map" id="ubicacion">
+        <div className="container">
+          <div style={{textAlign:'center', marginBottom:'40px'}}>
+            <div className="section-label">Ubicación</div>
+            <h2 style={{fontFamily:'var(--font-display)', fontSize:'clamp(28px,3.5vw,40px)', color:'var(--color-primary)', marginBottom:'12px'}}>
+              Cómo llegar
+            </h2>
+            <p style={{maxWidth:'480px', margin:'0 auto'}}>
+              Estamos ubicados en el centro de la ciudad. Ven a visitarnos.
+            </p>
+          </div>
+          <div className="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.7604284792847!2d-78.5476990250354!3d-0.30865289968831117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMTgnMzEuMiJTIDc4wrAzMic0Mi41Ilc!5e0!3m2!1ses!2sec!4v1777605248694!5m2!1ses!2sec"
+              width="100%"
+              height="400"
+              style={{border:0, borderRadius:'var(--radius-lg)'}}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );
